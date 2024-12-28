@@ -1,4 +1,5 @@
 import Logo from "../Logo/Logo";
+import SearchBar from "../SearchBar/SearchBar";
 import "./style.scss";
 
 function Header() {
@@ -9,7 +10,9 @@ function Header() {
 					<div className="header__logo">
 						<Logo />
 					</div>
-					<div className="header__search">SEARCH</div>
+					<div className="header__search">
+						<SearchBar />
+					</div>
 					<div className="header__logo">USER MENU</div>
 				</div>
 			</div>
