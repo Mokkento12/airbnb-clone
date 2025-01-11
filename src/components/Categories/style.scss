@@ -1,18 +1,54 @@
 .categories {
+	padding: 16px;
 }
 .container {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 16px;
 }
 
 .categories__row {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	flex-wrap: wrap;
 }
 
 .categories__list {
 	display: flex;
 	align-items: center;
 	gap: 32px;
+	flex-wrap: wrap;
 }
 .categories__filter {
+	margin-top: 16px; /* Отступ для мобильных, если фильтр уходит вниз */
+}
+
+@media (max-width: 768px) {
+	.categories__row {
+		flex-direction: column; /* Ставим фильтр под списком категорий */
+		align-items: flex-start; /* Выравнивание к началу */
+	}
+
+	.categories__list {
+		gap: 16px; /* Уменьшаем расстояние между элементами */
+		justify-content: center; /* Центрируем список */
+	}
+
+	.categories__filter {
+		margin-top: 16px; /* Дополнительное пространство */
+		width: 100%; /* Фильтр занимает всю ширину */
+		text-align: center; /* Текст фильтра в центре */
+	}
+}
+
+@media (max-width: 480px) {
+	.categories__list {
+		flex-direction: column; /* Список категорий в столбик */
+		gap: 12px; /* Уменьшаем расстояние между элементами */
+	}
+
+	.categories__filter {
+		margin-top: 12px; /* Уменьшаем отступ */
+	}
 }
