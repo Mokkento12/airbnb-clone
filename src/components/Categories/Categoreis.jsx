@@ -4,20 +4,20 @@ import categoriesData from "./../../data/categories.json";
 import "./style.scss";
 
 const Categories = () => {
-	console.log(categoriesData);
-
 	return (
 		<div className="categories">
 			<div className="container">
 				<div className="categories__row">
 					<div className="categories__list">
-						{categoriesData.map((cat) => (
-							<CategoryItem
-								key={cat.id}
-								title={cat.title}
-								img={cat.img}
-							/>
-						))}
+						{categoriesData.map((cat, index) => {
+							return (
+								<CategoryItem
+									key={index}
+									title={cat.title}
+									img={cat.img}
+								/>
+							);
+						})}
 					</div>
 					<div className="categories__filter">
 						<FilterBtn />
